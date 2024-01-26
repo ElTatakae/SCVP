@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'inicioDeSesion',
     'inicio',
     'registroDeEmpresa',
+    'creacionDeUsariosYGrupos',
 ]
 
 MIDDLEWARE = [
