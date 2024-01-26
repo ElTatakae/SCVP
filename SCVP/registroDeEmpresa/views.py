@@ -12,3 +12,6 @@ def registroDeEmpresa(request):
 def registrarNombreEmpresa(request):
     template = loader.get_template('registrarNombreEmpresa.html')
     return HttpResponse(template.render())
+def registroDatosEmpresa(request):
+    template = loader.get_template('registroDatosEmpresa.html')
+    return HttpResponse(template.render())
