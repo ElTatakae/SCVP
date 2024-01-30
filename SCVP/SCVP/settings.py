@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'inicioSCVP',
     'registroDeEmpresa',
     'creacionDeUsariosYGrupos',
+
 ]
 
 MIDDLEWARE = [
@@ -79,8 +80,12 @@ WSGI_APPLICATION = 'SCVP.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'usuarios',
+        'USER': 'postgres',
+        'PASSWORD': 'Admin1234',
+        'HOST': 'localhost',
+        'PORT': 5432
     }
 }
 

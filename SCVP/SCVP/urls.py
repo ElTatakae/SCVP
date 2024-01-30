@@ -1,11 +1,10 @@
 from django.contrib import admin
 from django.urls import path, include
-from inicioSCVP import views
-from inicioDeSesion import views
+
+
 
 urlpatterns = [
-    path('', views.inicioSCVP, name='inicioSCVP'),
-    path('', views.inicioDeSesion, name='inicioDeSesion'),
+    path('', include('inicioSCVP.urls')),
     path('admin/', admin.site.urls),
 ]
 
