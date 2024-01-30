@@ -37,7 +37,11 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    "inicio.apps.InicioConfig"
+    'inicioDeSesion',
+    'inicioSCVP',
+    'registroDeEmpresa',
+    'creacionDeUsariosYGrupos',
+
 ]
 
 MIDDLEWARE = [
@@ -76,8 +80,12 @@ WSGI_APPLICATION = 'SCVP.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'usuarios',
+        'USER': 'postgres',
+        'PASSWORD': 'Admin1234',
+        'HOST': 'localhost',
+        'PORT': 5432
     }
 }
 
@@ -116,8 +124,14 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
+STATIC_ROOT = BASE_DIR / 'static'
+
 STATIC_URL = 'static/'
 
+#Add this in your settings.py file:
+STATICFILES_DIRS = [
+    BASE_DIR / 'staticGlobal'
+]
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
