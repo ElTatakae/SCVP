@@ -8,4 +8,7 @@ from django.template import loader
 def inicioSCVP(request):
     template = loader.get_template('inicio.html')
     return HttpResponse(template.render())
+def inicioAdministrador(request):
+    template = loader.get_template('inicioAdministrador.html')
+    return HttpResponse(template.render())
 
