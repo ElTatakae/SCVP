@@ -9,3 +9,7 @@ from django.template import loader
 def inicioDeSesion(request):
     template = loader.get_template('logueo.html')
     return HttpResponse(template.render())
+
+def registro(request):
+    template = loader.get_template('registro.html')
+    return HttpResponse(template.render())

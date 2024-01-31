@@ -500,13 +500,13 @@
                             </div>
                             <div class="col-xl-4 mb-4">
                                 <!-- Dashboard example card 2-->
-                                <a class="card lift h-100" href="#!">
+                                <a class="card lift h-100" href={% url "creacionDeGrupo" %}>
                                     <div class="card-body d-flex justify-content-center flex-column">
                                         <div class="d-flex align-items-center justify-content-between">
                                             <div class="me-3">
                                                 <i class="feather-xl text-secondary mb-3" data-feather="book"></i>
-                                                <h5>Crea grupos</h5>
-                                                <div class="text-muted small">To keep you on track when working with our toolkit</div>
+                                                <h5>Crear grupo</h5>
+                                                <div class="text-muted small">Crea grupos para cada proceso de producción</div>
                                             </div>
                                             <img src={% static "assets/img/illustrations/processing.svg" %} alt="..." style="width: 8rem" />
                                         </div>
@@ -515,13 +515,13 @@
                             </div>
                             <div class="col-xl-4 mb-4">
                                 <!-- Dashboard example card 3-->
-                                <a class="card lift h-100" href="#!">
+                                <a class="card lift h-100" href={% url "registroUsuario"%}>
                                     <div class="card-body d-flex justify-content-center flex-column">
                                         <div class="d-flex align-items-center justify-content-between">
                                             <div class="me-3">
                                                 <i class="feather-xl text-green mb-3" data-feather="layout"></i>
-                                                <h5>Pages &amp; Layouts</h5>
-                                                <div class="text-muted small">To help get you started when building your new UI</div>
+                                                <h5>Registrar usuario</h5>
+                                                <div class="text-muted small">Registrar nuevo usuario lider</div>
                                             </div>
                                             <img src={% static "assets/img/illustrations/windows.svg" %} alt="..." style="width: 8rem" />
                                         </div>
@@ -530,6 +530,7 @@
                             </div>
 
                         </div>
+
                         <div class="col-xxl-4">
                                 <div class="row">
                                     <div class="col-xl-6 col-xxl-12">
@@ -544,7 +545,7 @@
                                                 <!-- Item 1-->
                                                 <div class="d-flex align-items-center justify-content-between mb-4">
                                                     <div class="d-flex align-items-center flex-shrink-0 me-3">
-                                                        <div class="avatar avatar-xl me-3 bg-gray-200"><img class="avatar-img img-fluid" src={%  static "assets/img/illustrations/profiles/profile-1.png" %}alt="" /></div>
+                                                        <div class="avatar avatar-xl me-3 bg-gray-200"><img class="avatar-img img-fluid" src={%  static "assets/img/illustrations/profiles/profile-1.png" %} alt="" /></div>
                                                         <div class="d-flex flex-column fw-bold">
                                                             <a class="text-dark line-height-normal mb-1" href="#!">Sid Rooney</a>
                                                             <div class="small text-muted line-height-normal">Operador</div>
@@ -562,7 +563,7 @@
                                                 <!-- Item 2-->
                                                 <div class="d-flex align-items-center justify-content-between mb-4">
                                                     <div class="d-flex align-items-center flex-shrink-0 me-3">
-                                                        <div class="avatar avatar-xl me-3 bg-gray-200"><img class="avatar-img img-fluid" src="assets/img/illustrations/profiles/profile-2.png" alt="" /></div>
+                                                        <div class="avatar avatar-xl me-3 bg-gray-200"><img class="avatar-img img-fluid" src={% static "assets/img/illustrations/profiles/profile-2.png" %} alt="" /></div>
                                                         <div class="d-flex flex-column fw-bold">
                                                             <a class="text-dark line-height-normal mb-1" href="#!">Keelan Garza</a>
                                                             <div class="small text-muted line-height-normal">Position</div>
@@ -595,54 +596,65 @@
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <!-- Item 4-->
+                                            </div>
+                                        </div>
+                                    </div>
+                                      <div class="col-xl-6 col-xxl-12">
+                                      <div class="card mb-4">
+                                            <div class="card card-header-actions mb-4">
+                                                <div class="card-header">
+                                                Grupos
+                                                </div>
+                                            </div>
+                                            <div class="card-body">
+                                                <!-- Item 1-->
                                                 <div class="d-flex align-items-center justify-content-between mb-4">
                                                     <div class="d-flex align-items-center flex-shrink-0 me-3">
-                                                        <div class="avatar avatar-xl me-3 bg-gray-200"><img class="avatar-img img-fluid" src="assets/img/illustrations/profiles/profile-4.png" alt="" /></div>
+                                                        <div class="avatar avatar-xl me-3 bg-gray-200"><img class="avatar-img img-fluid" src={%  static "assets/img/illustrations/profiles/profile-1.png" %} alt="" /></div>
                                                         <div class="d-flex flex-column fw-bold">
-                                                            <a class="text-dark line-height-normal mb-1" href="#!">Kerri Kearney</a>
-                                                            <div class="small text-muted line-height-normal">Position</div>
+                                                            <a class="text-dark line-height-normal mb-1" href="#!">Sid Rooney</a>
+                                                            <div class="small text-muted line-height-normal">Operador</div>
                                                         </div>
                                                     </div>
                                                     <div class="dropdown no-caret">
-                                                        <button class="btn btn-transparent-dark btn-icon dropdown-toggle" id="dropdownPeople4" type="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i data-feather="more-vertical"></i></button>
-                                                        <div class="dropdown-menu dropdown-menu-end animated--fade-in-up" aria-labelledby="dropdownPeople4">
+                                                        <button class="btn btn-transparent-dark btn-icon dropdown-toggle" id="dropdownPeople1" type="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i data-feather="more-vertical"></i></button>
+                                                        <div class="dropdown-menu dropdown-menu-end animated--fade-in-up" aria-labelledby="dropdownPeople1">
                                                             <a class="dropdown-item" href="#!">Action</a>
                                                             <a class="dropdown-item" href="#!">Another action</a>
                                                             <a class="dropdown-item" href="#!">Something else here</a>
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <!-- Item 5-->
+                                                <!-- Item 2-->
                                                 <div class="d-flex align-items-center justify-content-between mb-4">
                                                     <div class="d-flex align-items-center flex-shrink-0 me-3">
-                                                        <div class="avatar avatar-xl me-3 bg-gray-200"><img class="avatar-img img-fluid" src="assets/img/illustrations/profiles/profile-5.png" alt="" /></div>
+                                                        <div class="avatar avatar-xl me-3 bg-gray-200"><img class="avatar-img img-fluid" src={% static "assets/img/illustrations/profiles/profile-2.png" %} alt="" /></div>
                                                         <div class="d-flex flex-column fw-bold">
-                                                            <a class="text-dark line-height-normal mb-1" href="#!">Georgina Findlay</a>
+                                                            <a class="text-dark line-height-normal mb-1" href="#!">Keelan Garza</a>
                                                             <div class="small text-muted line-height-normal">Position</div>
                                                         </div>
                                                     </div>
                                                     <div class="dropdown no-caret">
-                                                        <button class="btn btn-transparent-dark btn-icon dropdown-toggle" id="dropdownPeople5" type="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i data-feather="more-vertical"></i></button>
-                                                        <div class="dropdown-menu dropdown-menu-end animated--fade-in-up" aria-labelledby="dropdownPeople5">
+                                                        <button class="btn btn-transparent-dark btn-icon dropdown-toggle" id="dropdownPeople2" type="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i data-feather="more-vertical"></i></button>
+                                                        <div class="dropdown-menu dropdown-menu-end animated--fade-in-up" aria-labelledby="dropdownPeople2">
                                                             <a class="dropdown-item" href="#!">Action</a>
                                                             <a class="dropdown-item" href="#!">Another action</a>
                                                             <a class="dropdown-item" href="#!">Something else here</a>
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <!-- Item 6-->
-                                                <div class="d-flex align-items-center justify-content-between">
+                                                <!-- Item 3-->
+                                                <div class="d-flex align-items-center justify-content-between mb-4">
                                                     <div class="d-flex align-items-center flex-shrink-0 me-3">
-                                                        <div class="avatar avatar-xl me-3 bg-gray-200"><img class="avatar-img img-fluid" src="assets/img/illustrations/profiles/profile-6.png" alt="" /></div>
+                                                        <div class="avatar avatar-xl me-3 bg-gray-200"><img class="avatar-img img-fluid" src={% static "assets/img/illustrations/profiles/profile-3.png"%} alt="" /></div>
                                                         <div class="d-flex flex-column fw-bold">
-                                                            <a class="text-dark line-height-normal mb-1" href="#!">Wilf Ingram</a>
+                                                            <a class="text-dark line-height-normal mb-1" href="#!">Kaia Smyth</a>
                                                             <div class="small text-muted line-height-normal">Position</div>
                                                         </div>
                                                     </div>
                                                     <div class="dropdown no-caret">
-                                                        <button class="btn btn-transparent-dark btn-icon dropdown-toggle" id="dropdownPeople6" type="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i data-feather="more-vertical"></i></button>
-                                                        <div class="dropdown-menu dropdown-menu-end animated--fade-in-up" aria-labelledby="dropdownPeople6">
+                                                        <button class="btn btn-transparent-dark btn-icon dropdown-toggle" id="dropdownPeople3" type="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i data-feather="more-vertical"></i></button>
+                                                        <div class="dropdown-menu dropdown-menu-end animated--fade-in-up" aria-labelledby="dropdownPeople3">
                                                             <a class="dropdown-item" href="#!">Action</a>
                                                             <a class="dropdown-item" href="#!">Another action</a>
                                                             <a class="dropdown-item" href="#!">Something else here</a>
@@ -651,29 +663,121 @@
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
-                                    <div class="col-xxl-4">
-                                <div class="row">
-                                    <div class="col-xl-6 col-xxl-12">
-                                     <div class="col-xxl-4">
-                                         <div class="row">
-                                              <div class="card mb-4">
-                                                  <div class="card-body py-5">
-                                                     <div class="d-flex flex-column justify-content-center">
-                                                        <img class="img-fluid mb-4" src={% static "assets/img/illustrations/data-report.svg"%} alt="" style="height: 10rem" />
-                                                  <div class="text-center px-0 px-lg-5">
-                                                     <h5>Generación de reportes</h5>
-                                                        <p class="mb-4">Our new report generation system is now online. You can start creating custom reporting for any documents available on your account.</p>
-                                                     <a class="btn btn-primary p-3" href="#!">Get Started</a>
-                                                  </div>
-                                                     </div>
-                                                  </div>
-                                    </div>
-                                </div>
                             </div>
                         </div>
-
-                            </div>
+                            <div class="row">
+                                    <div class="col-xl-6 mb-4">
+                                        <!-- Dashboard activity timeline example-->
+                                        <div class="card card-header-actions h-100">
+                                            <div class="card-header">
+                                                Actividad reciente
+                                                <div class="dropdown no-caret">
+                                                    <button class="btn btn-transparent-dark btn-icon dropdown-toggle" id="dropdownMenuButton" type="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="text-gray-500" data-feather="more-vertical"></i></button>
+                                                    <div class="dropdown-menu dropdown-menu-end animated--fade-in-up" aria-labelledby="dropdownMenuButton">
+                                                        <h6 class="dropdown-header">Filter Activity:</h6>
+                                                        <a class="dropdown-item" href="#!"><span class="badge bg-green-soft text-green my-1">Commerce</span></a>
+                                                        <a class="dropdown-item" href="#!"><span class="badge bg-blue-soft text-blue my-1">Reporting</span></a>
+                                                        <a class="dropdown-item" href="#!"><span class="badge bg-yellow-soft text-yellow my-1">Server</span></a>
+                                                        <a class="dropdown-item" href="#!"><span class="badge bg-purple-soft text-purple my-1">Users</span></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="card-body">
+                                                <div class="timeline timeline-xs">
+                                                    <!-- Timeline Item 1-->
+                                                    <div class="timeline-item">
+                                                        <div class="timeline-item-marker">
+                                                            <div class="timeline-item-marker-text">27 min</div>
+                                                            <div class="timeline-item-marker-indicator bg-green"></div>
+                                                        </div>
+                                                        <div class="timeline-item-content">
+                                                            New order placed!
+                                                            <a class="fw-bold text-dark" href="#!">Order #2912</a>
+                                                            has been successfully placed.
+                                                        </div>
+                                                    </div>
+                                                    <!-- Timeline Item 2-->
+                                                    <div class="timeline-item">
+                                                        <div class="timeline-item-marker">
+                                                            <div class="timeline-item-marker-text">58 min</div>
+                                                            <div class="timeline-item-marker-indicator bg-blue"></div>
+                                                        </div>
+                                                        <div class="timeline-item-content">
+                                                            Your
+                                                            <a class="fw-bold text-dark" href="#!">weekly report</a>
+                                                            has been generated and is ready to view.
+                                                        </div>
+                                                    </div>
+                                                    <!-- Timeline Item 3-->
+                                                    <div class="timeline-item">
+                                                        <div class="timeline-item-marker">
+                                                            <div class="timeline-item-marker-text">2 hrs</div>
+                                                            <div class="timeline-item-marker-indicator bg-purple"></div>
+                                                        </div>
+                                                        <div class="timeline-item-content">
+                                                            New user
+                                                            <a class="fw-bold text-dark" href="#!">Valerie Luna</a>
+                                                            has registered
+                                                        </div>
+                                                    </div>
+                                                    <!-- Timeline Item 4-->
+                                                    <div class="timeline-item">
+                                                        <div class="timeline-item-marker">
+                                                            <div class="timeline-item-marker-text">1 day</div>
+                                                            <div class="timeline-item-marker-indicator bg-yellow"></div>
+                                                        </div>
+                                                        <div class="timeline-item-content">Server activity monitor alert</div>
+                                                    </div>
+                                                    <!-- Timeline Item 5-->
+                                                    <div class="timeline-item">
+                                                        <div class="timeline-item-marker">
+                                                            <div class="timeline-item-marker-text">1 day</div>
+                                                            <div class="timeline-item-marker-indicator bg-green"></div>
+                                                        </div>
+                                                        <div class="timeline-item-content">
+                                                            New order placed!
+                                                            <a class="fw-bold text-dark" href="#!">Order #2911</a>
+                                                            has been successfully placed.
+                                                        </div>
+                                                    </div>
+                                                    <!-- Timeline Item 6-->
+                                                    <div class="timeline-item">
+                                                        <div class="timeline-item-marker">
+                                                            <div class="timeline-item-marker-text">1 day</div>
+                                                            <div class="timeline-item-marker-indicator bg-purple"></div>
+                                                        </div>
+                                                        <div class="timeline-item-content">
+                                                            Details for
+                                                            <a class="fw-bold text-dark" href="#!">Marketing and Planning Meeting</a>
+                                                            have been updated.
+                                                        </div>
+                                                    </div>
+                                                    <!-- Timeline Item 7-->
+                                                    <div class="timeline-item">
+                                                        <div class="timeline-item-marker">
+                                                            <div class="timeline-item-marker-text">2 days</div>
+                                                            <div class="timeline-item-marker-indicator bg-green"></div>
+                                                        </div>
+                                                        <div class="timeline-item-content">
+                                                            New order placed!
+                                                            <a class="fw-bold text-dark" href="#!">Order #2910</a>
+                                                            has been successfully placed.
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                             <div class="col-lg-4 mb-4">
+                                <!-- Illustration card example-->
+                                <div class="card mb-4">
+                                    <div class="card-body text-center p-5">
+                                        <img class="img-fluid mb-5" src={% static "assets/img/illustrations/data-report.svg" %} />
+                                        <h4>Generación de reportes</h4>
+                                        <p class="mb-4">Genere reportes estadisticos de procesos</p>
+                                        <a class="btn btn-primary p-3" href="#!">Generar</a>
+                                    </div>
+                                </div>
 
                     </div>
                 </main>
