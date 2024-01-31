@@ -8,4 +8,3 @@ from django.template import loader
 def inicioSCVP(request):
     template = loader.get_template('inicio.html')
     return HttpResponse(template.render())
-
