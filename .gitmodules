@@ -1,7 +1,0 @@
-[submodule "AdminLTE"]
-    path = AdminLTE
-    url = https://github.com/ColorlibHQ/AdminLTE.git
-
-[submodule "SCVP2"]
-    path = SCVP2
-    url = https://github.com/ElTatakae/SCVP.git
