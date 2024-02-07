@@ -638,6 +638,23 @@
                                     </div>
                                 </a>
                             </div>
+                                     <div class="col-xl-4 mb-4 align-content-center">
+                                <!-- Dashboard example card 3-->
+                                <a class="card lift h-100" href="#!">
+                                    <div class="card-body d-flex justify-content-center flex-column">
+                                        <div class="d-flex align-items-center justify-content-between">
+                                            <div class="me-3">
+                                                <i class="feather-xl text-green mb-3" data-feather="layout"></i>
+                                                <h5>Monitoreos</h5>
+                                                <div class="text-muted small">Realización de monitoreos por parte del lider</div>
+                                            </div>
+                                            <img src={% static "assets/img/illustrations/windows.svg" %} alt="..." style="width: 8rem" />
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+
+
 
 
                         <div class="container-xl px-4">
@@ -665,13 +682,13 @@
 
                                  <div class="col-xl-4 mb-4">
                                 <!-- Dashboard example card 3-->
-                                <a class="card lift h-100" href="#!">
+                                <a class="card lift h-100" href={% url "estadisticos"%}>
                                     <div class="card-body d-flex justify-content-center flex-column">
                                         <div class="d-flex align-items-center justify-content-between">
                                             <div class="me-3">
                                                 <i class="feather-xl text-green mb-3" data-feather="layout"></i>
-                                                <h5>Visualizar estadisticos</h5>
-                                                <div class="text-muted small">Registrar nuevo usuario lider</div>
+                                                <h5>Estadisticos</h5>
+                                                <div class="text-muted small">Visualizar estadisticos </div>
                                             </div>
                                             <img src={% static "assets/img/illustrations/windows.svg" %} alt="..." style="width: 8rem" />
                                         </div>
