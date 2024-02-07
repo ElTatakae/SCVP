@@ -27,6 +27,10 @@ def inicio_de_sesion(request):
     template = loader.get_template('inicio_de_sesion.html')
     return HttpResponse(template.render())
 
+def agregar_grupo(request):
+    template = loader.get_template('agregar_grupo.html')
+    return HttpResponse(template.render())
+
 def base(request):
     template = loader.get_template('base.html')
     return HttpResponse(template.render())
