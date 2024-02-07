@@ -1,4 +1,4 @@
-{% extends 'base.html' %} {% load static %}
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -9,7 +9,7 @@
         <meta name="author" content="" />
         <title>Inicio de sesion SCVP</title>
     </head>
-    {% block content %}
+
     <link rel="stylesheet" href="{% static 'css/styles.css' %}" />
 
     <body class="bg-primary">
@@ -82,5 +82,5 @@
         </div>
         <!--  { % messages %}  Mostrar mensajes de error de credenciales en el inicio de sesion-->
     </body>
-    {% endblock %}
+
 </html>
