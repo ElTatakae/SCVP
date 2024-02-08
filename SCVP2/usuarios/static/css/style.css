@@ -11,7 +11,7 @@
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  */
 :root {
-  --bs-blue: #0061f2;
+  --bs-blue: #000000;
   --bs-indigo: #5800e8;
   --bs-purple: #6900c7;
   --bs-pink: #e30059;
@@ -34,7 +34,7 @@
   --bs-gray-700: #4a515b;
   --bs-gray-800: #363d47;
   --bs-gray-900: #212832;
-  --bs-primary: #0061f2;
+  --bs-primary: #000000;
   --bs-secondary: #6900c7;
   --bs-success: #00ac69;
   --bs-info: #00cfd5;
@@ -50,7 +50,7 @@
   --bs-green: #00ac69;
   --bs-teal: #00ba94;
   --bs-cyan: #00cfd5;
-  --bs-blue: #0061f2;
+  --bs-blue: #000000;
   --bs-indigo: #5800e8;
   --bs-purple: #6900c7;
   --bs-pink: #e30059;
@@ -86,7 +86,7 @@
   --bs-green-rgb: 0, 172, 105;
   --bs-teal-rgb: 0, 186, 148;
   --bs-cyan-rgb: 0, 207, 213;
-  --bs-blue-rgb: 0, 97, 242;
+  --bs-blue-rgb: 88, 0, 232;
   --bs-indigo-rgb: 88, 0, 232;
   --bs-purple-rgb: 105, 0, 199;
   --bs-pink-rgb: 227, 0, 89;
@@ -10917,7 +10917,7 @@ textarea.form-control-lg {
 
 .bg-blue {
   --bs-bg-opacity: 1;
-  background-color: rgba(var(--bs-blue-rgb), var(--bs-bg-opacity)) !important;
+  background-color: rgba(var(--bs-indigo-rgb), var(--bs-bg-opacity)) !important;
 }
 
 .bg-indigo {
@@ -15139,7 +15139,7 @@ body {
 }
 
 .bg-gradient-primary-to-secondary {
-  background-color: #0061f2 !important;
+  background-color: #000000 !important;
   background-image: linear-gradient(135deg, #0061f2 0%, rgba(105, 0, 199, 0.8) 100%) !important;
 }
 

@@ -30,3 +30,19 @@ def inicio_de_sesion(request):
 def base(request):
     template = loader.get_template('base.html')
     return HttpResponse(template.render())
+
+def modulo_lider(request):
+    template = loader.get_template('modulo_lider.html')
+    return HttpResponse(template.render())
+
+def modulo_administrador(request):
+    template = loader.get_template('modulo_administrador.html')
+    return HttpResponse(template.render())
+
+def modulo_operador(request):
+    template = loader.get_template('modulo_operador.html')
+    return HttpResponse(template.render())
+
+def inicio(request):
+    template = loader.get_template('landingpage.html')
+    return HttpResponse(template.render())

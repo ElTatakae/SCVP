@@ -80,11 +80,11 @@ WSGI_APPLICATION = 'SCVP2.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'usuarios',
+        'NAME': 'SCVP',
         'USER': 'postgres',
         'PASSWORD': 'Admin1234',
         'HOST': 'localhost',
-        'PORT': 5432
+        'PORT': 5433
     }
 }
 
