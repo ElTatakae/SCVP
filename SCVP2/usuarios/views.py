@@ -32,5 +32,13 @@ def agregar_grupo(request):
     return HttpResponse(template.render())
 
 def base(request):
-    template = loader.get_template('base.html')
+    template = loader.get_template('panel.html')
+    return HttpResponse(template.render())
+
+def panel_lideres(request):
+    template = loader.get_template('panel_lideres.html')
+    return HttpResponse(template.render())
+
+def panel_operadores(request):
+    template = loader.get_template('panel_operadores.html')
     return HttpResponse(template.render())
