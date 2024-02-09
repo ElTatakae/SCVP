@@ -1,7 +1,6 @@
 from django.shortcuts import render, redirect
 from django.http import HttpResponse
 from django.template import loader
-from .forms import CustomUserCreationForm
 from django.views.decorators.csrf import csrf_protect
 from django.views.decorators.csrf import csrf_exempt
 
@@ -9,14 +8,8 @@ from django.views.decorators.csrf import csrf_exempt
 @csrf_exempt
 @csrf_protect #Esto asegura que la validación del token CSRF se realice antes de procesar cualquier solicitud POST a esta vista.
 def registro_de_usuario(request):
-    if request.method == 'POST':
-        form = CustomUserCreationForm(request.POST)
-        if form.is_valid():
-            form.save()
-            return redirect('incio_lider')  # Redireccionar a una página de éxito
-    else:
-        form = CustomUserCreationForm()
-    return render(request, 'registro_de_usuario.html', {'form': form})
+    template = loader.get_template('registro_de_usuario.html')
+    return HttpResponse(template.render())
 
 def inicio_panel(request):
     template = loader.get_template('inicio_panel.html')
@@ -27,8 +20,8 @@ def inicio_de_sesion(request):
     template = loader.get_template('inicio_de_sesion.html')
     return HttpResponse(template.render())
 
-def base(request):
-    template = loader.get_template('base.html')
+def panel_administrador(request):
+    template = loader.get_template('panel_administrador.html')
     return HttpResponse(template.render())
 
 def modulo_lider(request):
@@ -46,3 +39,4 @@ def modulo_operador(request):
 def inicio(request):
     template = loader.get_template('landingpage.html')
     return HttpResponse(template.render())
+

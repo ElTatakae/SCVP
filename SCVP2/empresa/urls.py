@@ -3,5 +3,5 @@ from . import views
 
 urlpatterns = [
     path('registro_de_empresa/', views.registro_de_empresa, name='registro_de_empresa'),
-   # path('', include('usuarios.urls')),
+   # path('', include('administrador.urls')),
 ]

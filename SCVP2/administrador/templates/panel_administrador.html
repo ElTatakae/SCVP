@@ -9,7 +9,7 @@
         <meta name="author" content="" />
         <title>Inicio de Aministrador</title>
         <link href="https://cdn.jsdelivr.net/npm/simple-datatables@7.1.2/dist/style.min.css" rel="stylesheet" />
-        <link   rel="stylesheet" href= "/static/css/style.css">
+        <link   rel="stylesheet" href= {% static 'global.css' %}>
         <link rel="icon" type="image/x-icon" href={% static "assets/img/favicon.png"%} />
         <script data-search-pseudo-elements defer src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/js/all.min.js" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/feather-icons/4.29.0/feather.min.js" crossorigin="anonymous"></script>
@@ -376,7 +376,7 @@
                     <!-- Sidenav Footer-->
                     <div class="sidenav-footer">
                         <div class="sidenav-footer-content">
-                            <div class="sidenav-footer-subtitle">Logged in as:</div>
+                            <div class="sidenav-footer-subtitle">Sesion iniciada cómo:</div>
                             <div class="sidenav-footer-title">Valerie Luna</div>
                         </div>
                     </div>
@@ -384,21 +384,7 @@
             </div>
             <div id="layoutSidenav_content">
                 <main>
-                    <header class="page-header page-header-dark bg-gradient-primary-to-secondary pb-10">
-                        <div class="container-xl px-4">
-                            <div class="page-header-content pt-4">
-                                <div class="row align-items-center justify-content-between">
-                                    <div class="col-auto mt-4">
-                                        <h1 class="page-header-title">
-                                            <div class="page-header-icon"><i data-feather="activity"></i></div>
-                                            Vista general
-                                        </h1>
-                                        <div class="page-header-subtitle"></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </header>
+
         {% block content %}{% endblock %}
     </div>
         </div>

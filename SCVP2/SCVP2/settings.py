@@ -38,9 +38,10 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'ingreso',
-    'usuarios',
+    'administrador',
     'empresa',
-    'operadores',
+    'operador',
+    "lider"
 ]
 
 MIDDLEWARE = [
@@ -80,11 +81,11 @@ WSGI_APPLICATION = 'SCVP2.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'SCVP',
+        'NAME': 'usuarios',
         'USER': 'postgres',
         'PASSWORD': 'Admin1234',
         'HOST': 'localhost',
-        'PORT': 5433
+        'PORT': 5432
     }
 }
 
@@ -134,4 +135,4 @@ STATICFILES_DIRS = [
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-AUTH_USER_MODEL = 'usuarios.CustomUser'
+
