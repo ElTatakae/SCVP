@@ -3,7 +3,7 @@ from django.http import HttpResponse
 from django.template import loader
 from django.shortcuts import render, redirect
 from django.contrib.auth import authenticate, login
-from .forms import registroAdministradorForm, ingresoAdminForm
+#from .forms import registroAdministradorForm, ingresoAdminForm
 #from django.views.decorators.csrf import csrf_protect
 #from django.views.decorators.csrf import csrf_exempt
 
@@ -51,7 +51,7 @@ def registro_de_empresa(request):
     return HttpResponse(template.render())
 
 
-
+"""
 def registro_administrador(request):
     if request.method == 'POST':
         form = registroAdministradorForm(request.POST)
@@ -79,3 +79,4 @@ def ingreso_administrador(request):
         form = ingresoAdminForm()
     return render(request, 'ingreso_administrador.html', {'form': form})
 
+"""

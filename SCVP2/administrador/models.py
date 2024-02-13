@@ -1,6 +1,8 @@
 from django.db import models
 from django.contrib.auth.models import AbstractBaseUser, BaseUserManager
 
+"""
+
 class AdministradorManager(BaseUserManager):
     def create_user(self, numero_empleado, contrasena=None):
         if not numero_empleado:
@@ -44,3 +46,4 @@ class Administrador(AbstractBaseUser):
     def is_staff(self):
         return self.is_admin
 # Especifica el nombre de la tabla existente en la base de datos
+"""

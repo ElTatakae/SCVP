@@ -1,6 +1,6 @@
 from django import forms
-from .models import Administrador
-
+#from .models import Administrador
+"""
 class registroAdministradorForm(forms.ModelForm):
     contrasena = forms.CharField(widget=forms.PasswordInput)
 
@@ -11,3 +11,4 @@ class registroAdministradorForm(forms.ModelForm):
 class ingresoAdminForm(forms.Form):
     numero_empleado = forms.CharField(max_length=8)
     contrasena = forms.CharField(widget=forms.PasswordInput)
+"""
