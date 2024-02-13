@@ -1,0 +1,179 @@
+{% extends 'panel_administrador.html' %}
+{% load static%}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Registro de empresa</title>
+        <link  rel="stylesheet" href={% static "css/styles.css"%} />
+        <link rel="icon" type="image/x-icon" href="assets/img/favicon.png" />
+        <script data-search-pseudo-elements defer src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/js/all.min.js" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/feather-icons/4.29.0/feather.min.js" crossorigin="anonymous"></script>
+    </head>
+    {% block content %}
+    <body class="bg-primary">
+        <div id="layoutAuthentication" class="bg-primary">
+            <div id="layoutAuthentication_content">
+                <main>
+                    <div class="container-xl px-4">
+                        <div class="row justify-content-center">
+                            <!-- Create Organization-->
+                           <div class="col-xl-8 col-lg-9 col-md-10 col-sm-11">
+                                <div class="card mt-5">
+                                    <div class="card-body p-5 text-center">
+                                        <div class="icons-org-create align-items-center mx-auto">
+                                            <i class="icon-users" data-feather="users"></i>
+                                            <i class="icon-plus fas fa-plus"></i>
+                                        </div>
+                                        <div class="h3 text-primary">Información de la empresa</div>
+                                    </div>
+                                    <hr class="m-0" />
+                                    <div class="card-body p-5">
+                                      <form>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <div class="mb-0 text-center">
+                                                    Nombre de la empresa
+                                                </div>
+                                                <p></p>
+                                                <div class="mb-3">
+                                                    <input class="form-control form-control-solid" type="text" placeholder="Introduce el nombre de la empresa" aria-label="Organization Name" aria-describedby="orgNameExample" />
+                                                </div>
+
+                                                <div class="mb-0 text-center">
+                                                    Logotipo
+                                                </div>
+                                                <p></p>
+                                                <div class="mb-3">
+                                                    <input class="form-control form-control-solid" type="file" placeholder="name@example.com" aria-label="Add User" aria-describedby="addUser" accept="image/png, image/jpeg" />
+                                                </div>
+
+                                                <div class="mb-0 text-center">
+                                                    Misión
+                                                </div>
+                                                <textarea class="form-control" rows="3" placeholder="Enter ..." data-listener-added_012372b5="true"></textarea>
+
+                                                <div class="mb-0 text-center">
+                                                    Visión
+                                                </div>
+                                                <textarea class="form-control" rows="3" placeholder="Enter ..." data-listener-added_012372b5="true"></textarea>
+                                            </div>
+
+                                            <div class="col-md-6">
+                                                <div class="mb-0 text-center">
+                                                    Dirección
+                                                </div>
+                                                <p></p>
+                                                <div class="mb-3">
+                                                    <input class="form-control form-control-solid" type="text" placeholder="Introduce la dirección de la empresa" aria-label="Address" aria-describedby="addressExample" />
+                                                </div>
+
+                                                <div class="mb-0 text-center">
+                                                    Correo Electrónico
+                                                </div>
+                                                <p></p>
+                                                <div class="mb-3">
+                                                    <input class="form-control form-control-solid" type="email" placeholder="name@example.com" aria-label="Email" aria-describedby="emailExample" />
+                                                </div>
+
+                                                <div class="mb-0 text-center">
+                                                    Teléfono
+                                                </div>
+                                                <p></p>
+                                                <div class="mb-3">
+                                                    <input class="form-control form-control-solid" type="tel" placeholder="Ingrese el número de teléfono" aria-label="Phone" aria-describedby="phoneExample" />
+                                                </div>
+
+                                                <div class="mb-0 text-center">
+                                                    Giro de la empresa
+                                                </div>
+                                                <p></p>
+                                                <div class="mb-3">
+                                                    <input class="form-control form-control-solid" type="text" placeholder="Introduce el giro de la empresa" aria-label="Business Type" aria-describedby="businessTypeExample" />
+                                                </div>
+
+                                                <div class="mb-0 text-center">
+                                                    Políticas de la empresa
+                                                </div>
+                                                <textarea class="form-control" rows="3" placeholder="Enter ..." data-listener-added_012372b5="true"></textarea>
+                                            </div>
+                                        </div>
+                                        <p></p>
+
+                                    </form>
+                                    <div class="d-flex align-items-center justify-content-between mt-4 mb-0">
+                                        <a class="btn btn-red"style="width: 140px;" href="{% url 'modulo_administrador' %}">Cancelar</a>
+                                        <a class="btn btn-primary" style="width: 140px;" href="{% url 'modulo_administrador' %}" >Guardar</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </main>
+            </div>
+
+            <div id="layoutAuthentication_footer">
+                <footer class="footer-admin mt-auto footer-dark">
+                    <div class="container-xl px-4" >
+                        <div class="row">
+                            <div class="col-md-6 small">Copyright &copy; Your Website 2021</div>
+                            <div class="col-md-6 text-md-end small">
+                                <a href="#!">Privacy Policy</a>
+                                &middot;
+                                <a href="#!">Terms &amp; Conditions</a>
+                            </div>
+                        </div>
+                    </div>
+                </footer>
+            </div>
+        </div>
+    </body>
+{% endblock %}
+
+    <!-- Retirando scripts de plantillas funciona el extends de base.html-->
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        // Obtén el formulario
+        var form = document.querySelector('form');
+
+        // Agrega un evento keydown al formulario
+        form.addEventListener('keydown', function (event) {
+            // Verifica si la tecla presionada es Enter (código 13)
+            if (event.key === 'Enter' || event.keyCode === 13) {
+                // Evita el comportamiento predeterminado del Enter en el formulario
+                event.preventDefault();
+
+                // Encuentra el campo actual que tiene el foco
+                var activeElement = document.activeElement;
+
+                // Encuentra el siguiente campo (puede ser de texto o carga de archivos)
+                var nextField = getNextField(activeElement);
+
+                // Establece el foco en el siguiente campo
+                if (nextField) {
+                    nextField.focus();
+                }
+            }
+        });
+
+        // Función para encontrar el siguiente campo
+        function getNextField(currentField) {
+            // Encuentra todos los campos de texto e input en el formulario
+            var allFields = Array.from(form.querySelectorAll('input[type="text"], input[type="file"]'));
+
+            // Encuentra el índice del campo actual
+            var currentIndex = allFields.indexOf(currentField);
+
+            // Obtiene el siguiente campo (manejando el ciclo al final del formulario)
+            var nextIndex = (currentIndex + 1) % allFields.length;
+
+            // Devuelve el siguiente campo
+            return allFields[nextIndex];
+        }
+    });
+</script>
+</html>
