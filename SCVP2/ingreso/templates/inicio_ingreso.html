@@ -24,15 +24,19 @@
                 <div class="center-wrap">
                   <div class="section text-center">
                     <h4 class="mb-4 pb-3">Ingreso</h4>
+                    <form method="post" action="{% url 'ingreso' %}">
+                      {% csrf_token %}
+                      {{ error }}
                     <div class="form-group">
-                      <input type="number" class="form-style" placeholder="Numero de Empleado">
+                      <input type="text" class="form-style" name="username" placeholder="Nombre de usuario">
                       <i class="input-icon uil uil-asterisk"></i>
                     </div>	
                     <div class="form-group mt-2">
-                      <input type="password" class="form-style" placeholder="Contraseña">
+                      <input type="password" class="form-style" name="password" placeholder="Contraseña">
                       <i class="input-icon uil uil-lock-alt"></i>
                     </div>
-                    <a href={% url 'modulo_operador' %} class="btn mt-4">Ingresar</a>
+                    <button type="submit" class="btn mt-4">Ingresar</button>
+                    </form>
                     <p class="mb-0 mt-4 text-center"><a href="#" class="link">¿Olvidaste tu contraseña?</a></p>
                       </div>
                     </div>
@@ -41,17 +45,19 @@
                 <div class="center-wrap">
                   <div class="section text-center">
                     <h4 class="mb-3 pb-3">Ingreso</h4>
-                    <div class="form-group">
+                    <form method="post" action="{% url 'ingreso' %}">
+                      {% csrf_token %}
+                      {{ error }}
                         <div class="form-group">
-                            <input type="number" class="form-style" placeholder="Numero de Empleado">
+                            <input type="number" class="form-style" name="numero_empleado" placeholder="Numero de Empleado">
                             <i class="input-icon uil uil-asterisk"></i>
                           </div>	
                           <div class="form-group mt-2">
-                            <input type="password" class="form-style" placeholder="Contraseña">
+                            <input type="password" class="form-style" name="password" placeholder="Contraseña">
                             <i class="input-icon uil uil-lock-alt"></i>
                           </div>
-                    </div>
-                    <a href={% url 'modulo_lider' %} class="btn mt-4">Ingresar</a>
+                    <button type="submit" class="btn mt-4">Ingresar</button>
+                    </form>
                     <p class="mb-0 mt-4 text-center"><a href="" class="link">¿Olvidaste tu contraseña?</a></p>
                       </div>
                     </div>
