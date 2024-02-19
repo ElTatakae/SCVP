@@ -15,16 +15,7 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/feather-icons/4.29.0/feather.min.js" crossorigin="anonymous"></script>
     </head>
 
-    <div class="container-xl px-4" style="margin-top: 25px;">
-        <div class="card">
-            <div class="card-header" style="text-align: center;">Hola Administrador !!!</div>
-            <!--div class="card-body">This compact page header example strips down the page header element to create a seamless, slim page header.</div-->
-        </div>
-    </div>
-    <body class="bg-primary justify-content-center">
-            <div class="card-body justify-content-center">
-                <form action="#" method="post">
-                    <div class="form-label m-5 justify-content-center">
+    <body class="bg-primary">
 
         <div id="layoutAuthentication" style="align-content: center">
             <div id="layoutAuthentication_content">
@@ -39,7 +30,6 @@
                                         <!-- Inicio de sesion formulario-->
                                   <form method="post" action="{% url 'modulo_administrador' %}">
                                         {% csrf_token %}
-                                        {{ warning }}
                                         {{ error }}
                                     <div class="mb-3">
                                         <label class="small mb-1" for="numeroEmpleado">Número de empleado</label>

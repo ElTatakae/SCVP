@@ -9,8 +9,8 @@
         <meta name="author" content="" />
         <title>Inicio de Aministrador</title>
         <link href="https://cdn.jsdelivr.net/npm/simple-datatables@7.1.2/dist/style.min.css" rel="stylesheet" />
-        <link   rel="stylesheet" href= "/static/css/style.css">
-        <link rel="icon" type="image/x-icon" href={% static "assets/img/favicon.png"%} />
+        <link   rel="stylesheet" href={% static 'global.css' %} >
+        <link rel="icon" type="image/x-icon" href={% static "assets/img/favicon.png" %} />
         <script data-search-pseudo-elements defer src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/js/all.min.js" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/feather-icons/4.29.0/feather.min.js" crossorigin="anonymous"></script>
     </head>
@@ -132,7 +132,7 @@
                 </li>
                 <!-- User Dropdown-->
                 <li class="nav-item dropdown no-caret dropdown-user me-3 me-lg-4">
-                    <a class="btn btn-icon btn-transparent-dark dropdown-toggle" id="navbarDropdownUserImage" href="javascript:void(0);" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img class="img-fluid" src={% static "assets/img/illustrations/profiles/profile-1.png"%}/></a>
+                    <a class="btn btn-icon btn-transparent-dark dropdown-toggle" id="navbarDropdownUserImage" href="javascript:void(0);" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img class="img-fluid" src={% static "assets/img/illustrations/profiles/profile-1.png" %}/></a>
                     <div class="dropdown-menu dropdown-menu-end border-0 shadow animated--fade-in-up" aria-labelledby="navbarDropdownUserImage">
                         <h6 class="dropdown-header d-flex align-items-center">
                             <img class="dropdown-user-img" src={% static "assets/img/illustrations/profiles/profile-1.png" %}/>
@@ -144,11 +144,11 @@
                         <div class="dropdown-divider"></div>
                         <a class="dropdown-item" href="#!">
                             <div class="dropdown-item-icon"><i data-feather="settings"></i></div>
-                            Account
+                            Cuenta
                         </a>
-                        <a class="dropdown-item" href="#!">
+                        <a class="dropdown-item" href={% url 'ingreso_usuario' %}>
                             <div class="dropdown-item-icon"><i data-feather="log-out"></i></div>
-                            Logout
+                            Cerrar Sesión
                         </a>
                     </div>
                 </li>
@@ -180,43 +180,21 @@
 
 
                             <!-- Sidenav Heading (Custom)-->
-                            <div class="sidenav-menu-heading">Vista General</div>
-                           
-                            <!-- Sidenav Accordion (Components)-->
-                            <a class="nav-link collapsed" href="javascript:void(0);" data-bs-toggle="collapse" data-bs-target="#collapseComponents" aria-expanded="false" aria-controls="collapseComponents">
-                                <div class="nav-link-icon"><i data-feather="package"></i></div>
-                                Alta de procesos
-                                <div class="sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
-                            </a>
-                            <div class="collapse" id="collapseComponents" data-bs-parent="#accordionSidenav">
-                                <nav class="sidenav-menu-nested nav">
-                                    <a class="nav-link" href="alerts.html">Alerts</a>
-                                    <a class="nav-link" href="avatars.html">Avatars</a>
-                                    <a class="nav-link" href="badges.html">Badges</a>
-                                    <a class="nav-link" href="buttons.html">Buttons</a>
-                                    <a class="nav-link" href="cards.html">
-                                        Cards
-                                        <span class="badge bg-primary-soft text-primary ms-auto">Updated</span>
-                                    </a>
-                                    <a class="nav-link" href="dropdowns.html">Dropdowns</a>
-                                    <a class="nav-link" href="forms.html">
-                                        Forms
-                                        <span class="badge bg-primary-soft text-primary ms-auto">Updated</span>
-                                    </a>
-                                    <a class="nav-link" href="modals.html">Modals</a>
-                                    <a class="nav-link" href="navigation.html">Navigation</a>
-                                    <a class="nav-link" href="progress.html">Progress</a>
-                                    <a class="nav-link" href="step.html">Step</a>
-                                    <a class="nav-link" href="timeline.html">Timeline</a>
-                                    <a class="nav-link" href="toasts.html">Toasts</a>
-                                    <a class="nav-link" href="tooltips.html">Tooltips</a>
-                                </nav>
-                            </div>
-                             <a class="nav-link collapsed" href="javascript:void(0);" data-bs-toggle="collapse" data-bs-target="#collapseComponents" aria-expanded="false" aria-controls="collapseComponents">
+                            <div class="sidenav-menu-heading">Panel General</div>
+                            <!-- Sidenav Accordion (Pages)-->
+                            
+                             <a class="nav-link collapsed" href="javascript:void(0);" data-bs-toggle="collapse" data-bs-target="#especificacionDeProductos" aria-expanded="false" aria-controls="especificacionDeProductos">
                                 <div class="nav-link-icon"><i data-feather="package"></i></div>
                                 Especificación de productos
                                 <div class="sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
                             </a>
+                              <div class="collapse" id="especificacionDeProductos" data-bs-parent="#accordionSidenav">
+                                <nav class="sidenav-menu-nested nav">
+                                    <a class="nav-link" href="animations.html">Animations</a>
+                                    <a class="nav-link" href="background.html">Background</a>
+                                    <a class="nav-link" href="borders.html">Borders</a>
+                                </nav>
+                            </div>
                             <!-- Sidenav Accordion (Utilities)-->
                             <a class="nav-link collapsed" href="javascript:void(0);" data-bs-toggle="collapse" data-bs-target="#collapseUtilities" aria-expanded="false" aria-controls="collapseUtilities">
                                 <div class="nav-link-icon"><i data-feather="tool"></i></div>
@@ -228,23 +206,34 @@
                                     <a class="nav-link" href="animations.html">Animations</a>
                                     <a class="nav-link" href="background.html">Background</a>
                                     <a class="nav-link" href="borders.html">Borders</a>
-                                    <a class="nav-link" href="lift.html">Lift</a>
-                                    <a class="nav-link" href="shadows.html">Shadows</a>
-                                    <a class="nav-link" href="typography.html">Typography</a>
                                 </nav>
                             </div>
 
-                            <a class="nav-link collapsed" href="javascript:void(0);" data-bs-toggle="collapse" data-bs-target="#collapseUtilities" aria-expanded="false" aria-controls="collapseUtilities">
+                            <a class="nav-link collapsed" href="javascript:void(0);" data-bs-toggle="collapse" data-bs-target="#monitoreo" aria-expanded="false" aria-controls="monitoreo">
                                 <div class="nav-link-icon"><i data-feather="bar-chart"></i></div>
                                  Monitoreo
                                 <div class="sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
                             </a>
+                             <div class="collapse" id="monitoreo" data-bs-parent="#accordionSidenav">
+                                <nav class="sidenav-menu-nested nav">
+                                    <a class="nav-link" href="animations.html">Animations</a>
+                                    <a class="nav-link" href="background.html">Background</a>
+                                    <a class="nav-link" href="borders.html">Borders</a>
+                                </nav>
+                            </div>
 
-                            <a class="nav-link collapsed" href="javascript:void(0);" data-bs-toggle="collapse" data-bs-target="#collapseUtilities" aria-expanded="false" aria-controls="collapseUtilities">
+                            <a class="nav-link collapsed" href="javascript:void(0);" data-bs-toggle="collapse" data-bs-target="#estadisticos" aria-expanded="false" aria-controls="estadisticos">
                                 <div class="nav-link-icon"><i data-feather="filter"></i></div>
                                  Estadisticos
                                 <div class="sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
                             </a>
+                             <div class="collapse" id="estadisticos" data-bs-parent="#accordionSidenav">
+                                <nav class="sidenav-menu-nested nav">
+                                    <a class="nav-link" href="animations.html">Animations</a>
+                                    <a class="nav-link" href="background.html">Background</a>
+                                    <a class="nav-link" href="borders.html">Borders</a>
+                                </nav>
+                            </div>
 
                         </div>
                     </div>
@@ -259,27 +248,13 @@
             </div>
             <div id="layoutSidenav_content">
                 <main>
-                    <header class="page-header page-header-dark bg-gradient-primary-to-secondary pb-10">
-                        <div class="container-xl px-4">
-                            <div class="page-header-content pt-4">
-                                <div class="row align-items-center justify-content-between">
-                                    <div class="col-auto mt-4">
-                                        <h1 class="page-header-title">
-                                            <div class="page-header-icon"><i data-feather="activity"></i></div>
-                                            Vista general
-                                        </h1>
-                                        <div class="page-header-subtitle"></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </header>
+
         {% block content %}{% endblock %}
     </div>
         </div>
              <!--Para el funcionamiento de este base.html eliminar estos 2 scripts de abajo en donde se llame a este html o simplemente no usarlos-->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
-        <script src={% static "js/scripts.js"%}></script>
+        <script src={% static "js/scripts.js" %}></script>
 
     </body>
         <footer>
