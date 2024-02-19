@@ -1,4 +1,8 @@
+<<<<<<< HEAD:SCVP2/operador/templates/estadisticos.html
 {% extends 'panel/panel_operador.html' %}
+=======
+{% extends 'panel.html' %}
+>>>>>>> 32dd6f982bacb8ae721a7648bac62fec779356df:SCVP2/operadores/templates/estadisticos.html
 {% load static %}
 <!DOCTYPE html>
 <html lang="en">
@@ -6,24 +10,12 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Estadisticos</title>
-
   <!-- Google Font: Source Sans Pro -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
   <!-- Font Awesome -->
-  <link rel="stylesheet" href={% static "plugins/fontawesome-free/css/all.min.css"%}>
-  <!-- uPlot -->
-  <link rel="stylesheet" href={% static "plugins/uplot/uPlot.min.css"%}>
+  <link rel="stylesheet" href={%  static "plugins/fontawesome-free/css/all.min.css"%}>
   <!-- Theme style -->
-  <link rel="stylesheet" href={% static "css/adminlte.min.css"%}>
-    <!-- DataTables -->
-      <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
-  <!-- Font Awesome -->
-  <link rel="stylesheet" href="plugins/fontawesome-free/css/all.min.css">
-  <!-- DataTables -->
-  <link rel="stylesheet" href={% static "plugins/datatables-bs4/css/dataTables.bootstrap4.min.css"%}>
-  <link rel="stylesheet" href={% static "plugins/datatables-responsive/css/responsive.bootstrap4.min.css"%}>
-  <link rel="stylesheet" href={% static "plugins/datatables-buttons/css/buttons.bootstrap4.min.css"%}>
-
+  <link rel="stylesheet" href={% static "css/adminlte.min.css" %}>
 </head>
 {%  block content %}
 <body class="hold-transition sidebar-mini">
@@ -47,6 +39,7 @@
                 <h3 class="card-title">Estadisticos</h3>
               </div>
               <!-- /.card-header -->
+
               <div class="card-body">
                 <table id="example1" class="table table-bordered table-striped">
                   <thead>
@@ -491,13 +484,6 @@
         </div>
         <!-- /.content-wrapper -->
       <p></p>
-        <div class="row">
-            <div class="col-md-6">
-                <!-- AREA CHART -->
-                <div class="card card-primary">
-                <div class="card-header">
-                    <h3 class="card-title"></h3>
-                    <div class="card-tools ">
 
     <!-- /.col (LEFT) -->
           <div class="col-md-6">
@@ -526,7 +512,7 @@
         </div>
         <!-- /.row -->
         </div><!-- /.container-fluid -->
-        </section>
+  </section>
         <!-- /.content -->
         </div>
             <!-- /.card -->
@@ -569,97 +555,12 @@
 <script src={% static "plugins/datatables-buttons/js/buttons.html5.min.js"%}></script>
 <script src={% static "plugins/datatables-buttons/js/buttons.print.min.js"%}></script>
 <script src={% static "plugins/datatables-buttons/js/buttons.colVis.min.js"%}></script>
+<script src={%  static "plugins/chart.js/Chart.min.js"%}></script>>
 <!-- AdminLTE App -->
-
-<!-- AdminLTE for demo purposes -->
-
-
+<script src={% static "js/adminlte.min.js"%}></script>
 <!-- Page specific script -->
 <script>
-  $(function () {
-    /* uPlot
-     * -------
-     * Here we will create a few charts using uPlot
-     */
-
-    function getSize(elementId) {
-      return {
-        width: document.getElementById(elementId).offsetWidth,
-        height: document.getElementById(elementId).offsetHeight,
-      }
-    }
-
-    let data = [
-      [0, 1, 2, 3, 4, 5, 6],
-      [28, 48, 40, 19, 86, 27, 90],
-      [65, 59, 80, 81, 56, 55, 40]
-    ];
-
-    //--------------
-    //- AREA CHART -
-    //--------------
-
-    const optsAreaChart = {
-      ... getSize('areaChart'),
-      scales: {
-        x: {
-          time: false,
-        },
-        y: {
-          range: [0, 100],
-        },
-      },
-      series: [
-        {},
-        {
-          fill: 'rgba(60,141,188,0.7)',
-          stroke: 'rgba(60,141,188,1)',
-        },
-        {
-          stroke: '#c1c7d1',
-          fill: 'rgba(210, 214, 222, .7)',
-        },
-      ],
-    };
-
-    let areaChart = new uPlot(optsAreaChart, data, document.getElementById('areaChart'));
-
-    const optsLineChart = {
-      ... getSize('lineChart'),
-      scales: {
-        x: {
-          time: false,
-        },
-        y: {
-          range: [0, 100],
-        },
-      },
-      series: [
-        {},
-        {
-          fill: 'transparent',
-          width: 5,
-          stroke: 'rgba(60,141,188,1)',
-        },
-        {
-          stroke: '#c1c7d1',
-          width: 5,
-          fill: 'transparent',
-        },
-      ],
-    };
-
-    let lineChart = new uPlot(optsLineChart, data, document.getElementById('lineChart'));
-
-    window.addEventListener("resize", e => {
-      areaChart.setSize(getSize('areaChart'));
-      lineChart.setSize(getSize('lineChart'));
-    });
-  })
-</script>
-    <!-- Page specific script -->
-<script>
-  $(function () {
+   $(function () {
     $("#example1").DataTable({
       "responsive": true, "lengthChange": false, "autoWidth": false,
       "buttons": ["copy", "csv", "excel", "pdf", "print", "colvis"]
@@ -674,8 +575,7 @@
       "responsive": true,
     });
   });
-
-    //-------------
+   //-------------
     //- LINE CHART -
     //--------------
     var lineChartCanvas = $('#lineChart').get(0).getContext('2d')
@@ -690,7 +590,6 @@
       data: lineChartData,
       options: lineChartOptions
     })
-
 
 </script>
 {% endblock %}
