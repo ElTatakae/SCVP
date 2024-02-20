@@ -132,8 +132,3 @@ STATIC_URL = 'static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-<<<<<<< HEAD
-CSRF_COOKIE_SECURE = True
-=======
-CSRF_COOKIE_SECURE = True #Esto asegura que la validación del token CSRF se realice antes de procesar cualquier solicitud POST a esta vista.
->>>>>>> 03a728ceb8c60b78927b74e6fa149964371b3092

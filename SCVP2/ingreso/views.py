@@ -1,6 +1,5 @@
 from django.http import HttpResponse
 from django.template import loader
-<<<<<<< HEAD
 from django.shortcuts import render, redirect
 from django.contrib.auth import authenticate, login
 from django.contrib.auth.forms import AuthenticationForm
@@ -60,7 +59,7 @@ def modulo_operador(request):
 def modulo_lider(request):
     template = loader.get_template('modulo_lider.html')
     return HttpResponse(template.render())
-=======
+
 from django.shortcuts import render
 
 from django.shortcuts import render
@@ -82,4 +81,3 @@ def ingreso_administrador(request):
 
     context = {}
     return render(request, 'ingreso_administrador.html', context)
->>>>>>> 03a728ceb8c60b78927b74e6fa149964371b3092
