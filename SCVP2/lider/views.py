@@ -9,7 +9,7 @@ def modulo_lider(request):
 
 def crear_grupo(request):
     context = {}
-    return render(request, 'crear_grupo.html', context) #asegurarnos de que el contexto incluya el token CSRF con render
+    return render(request, 'grupo/crear_grupo.html', context) #asegurarnos de que el contexto incluya el token CSRF con render
 
 def registro_de_lideres_y_operadores(request):
     context = {}
@@ -17,4 +17,12 @@ def registro_de_lideres_y_operadores(request):
 
 def procesos(request):
     context = {}
-    return render(request, 'procesos.html', context) #asegurarnos de que el contexto incluya el token CSRF con render
+    return render(request, 'proceso/procesos.html', context) #asegurarnos de que el contexto incluya el token CSRF con render
+
+def producto(request):
+    context = {}
+    return render(request, 'producto/producto.html', context) #asegurarnos de que el contexto incluya el token CSRF con render
+
+def monitoreo(request):
+    context = {}
+    return render(request, 'monitoreo.html', context) #asegurarnos de que el contexto incluya el token CSRF con render

@@ -8,7 +8,10 @@ body{
   overflow: hidden;
   height: 100vh;
   background: radial-gradient(circle at center, #78102e 3%, #78102e 75%);
+  overflow-y: auto;
+  height: 100vh;
 }
+
 a:hover {
 	text-decoration: none;
 }
@@ -26,6 +29,7 @@ h4 {
   font-weight: 600;
 }
 h6 span{
+  color: white;
   padding: 0 20px;
   font-weight: 700;
 }

@@ -118,7 +118,7 @@
   --bs-body-font-weight: 400;
   --bs-body-line-height: 1.5;
   --bs-body-color: #69707a;
-  --bs-body-bg: #f2f6fc;
+  --bs-body-bg: #78102e;
   --bs-border-width: 1px;
   --bs-border-style: solid;
   --bs-border-color: #e0e5ec;
@@ -9625,6 +9625,7 @@ textarea.form-control-lg {
 
 .justify-content-between {
   justify-content: space-between !important;
+
 }
 
 .justify-content-around {
@@ -15144,7 +15145,7 @@ body {
   background-image: linear-gradient(135deg, #78102e 0%, rgb(136, 22, 55) 100%) !important;
 =======
   background-color: #814e08 !important;
-  background-image: linear-gradient(135deg, #bd8338 0%, rgb(129, 78, 8) 100%) !important;
+  background-image: linear-gradient(135deg, #78102e 0%, rgb(136, 22, 55) 100%) !important;
 >>>>>>> 32dd6f982bacb8ae721a7648bac62fec779356df:SCVP2/usuarios/static/css/styles.css
 }
 
@@ -19622,4 +19623,12 @@ pre[class*=language-] {
 
 .token.variable {
   color: #ff6666;
+}
+.daterangepicker .calendar-table .next span, .daterangepicker .calendar-table .prev span {
+  color: #fff;
+  border: solid black;
+  border-width: 0 2px 2px 0;
+  border-radius: 0;
+  display: inline-block;
+  padding: 3px;
 }
