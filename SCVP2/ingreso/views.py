@@ -1,6 +1,6 @@
-from django.shortcuts import render
 from django.http import HttpResponse
 from django.template import loader
+<<<<<<< HEAD
 from django.shortcuts import render, redirect
 from django.contrib.auth import authenticate, login
 from django.contrib.auth.forms import AuthenticationForm
@@ -60,3 +60,26 @@ def modulo_operador(request):
 def modulo_lider(request):
     template = loader.get_template('modulo_lider.html')
     return HttpResponse(template.render())
+=======
+from django.shortcuts import render
+
+from django.shortcuts import render
+
+def ingreso_usuario(request):
+    if request.method == 'POST':
+        # Procesar los datos del formulario de inicio de sesión aquí
+        # Verificar la autenticación del usuario, por ejemplo
+        pass
+
+    context = {}
+    return render(request, 'ingreso_usuario.html', context)
+
+def ingreso_administrador(request):
+    if request.method == 'POST':
+        # Procesar los datos del formulario de inicio de sesión para el administrador aquí
+        # Verificar la autenticación del administrador, por ejemplo
+        pass
+
+    context = {}
+    return render(request, 'ingreso_administrador.html', context)
+>>>>>>> 03a728ceb8c60b78927b74e6fa149964371b3092

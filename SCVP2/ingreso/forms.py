@@ -1,4 +1,5 @@
 from django import forms
+<<<<<<< HEAD
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth import password_validation
 from django.contrib.auth.models import User
@@ -48,3 +49,10 @@ class CustomUserCreationForm(UserCreationForm):
         password2 = self.cleaned_data.get('password2')
         password_validation.validate_password(password2, self.instance)
         return password2
+=======
+#from .models import Administrador
+
+class ingresoAdminForm(forms.Form):
+    numero_empleado = forms.CharField(max_length=8)
+    contrasena = forms.CharField(widget=forms.PasswordInput)
+>>>>>>> 03a728ceb8c60b78927b74e6fa149964371b3092

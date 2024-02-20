@@ -38,9 +38,9 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'ingreso',
-    'usuarios',
-    'empresa',
-    'operadores',
+    'administrador',
+    'operador',
+    'lider',
 ]
 
 MIDDLEWARE = [
@@ -81,11 +81,11 @@ WSGI_APPLICATION = 'SCVP2.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'SCVP',
+        'NAME': 'usuarios',
         'USER': 'postgres',
         'PASSWORD': 'Admin1234',
         'HOST': 'localhost',
-        'PORT': 5433
+        'PORT': 5432
     }
 }
 
@@ -132,4 +132,8 @@ STATIC_URL = 'static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
+<<<<<<< HEAD
 CSRF_COOKIE_SECURE = True
+=======
+CSRF_COOKIE_SECURE = True #Esto asegura que la validación del token CSRF se realice antes de procesar cualquier solicitud POST a esta vista.
+>>>>>>> 03a728ceb8c60b78927b74e6fa149964371b3092
