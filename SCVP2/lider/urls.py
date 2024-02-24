@@ -8,4 +8,6 @@ urlpatterns = [
     path('modulo_lider/registro_de_lideres_y_operadores/', views.registro_de_lideres_y_operadores, name='registro_de_lideres_y_operadores'),
     path('modulo_lider/producto/', views.producto, name='producto'),
     path('modulo_lider/monitoreo/', views.monitoreo, name='monitoreo'),
+    path('panel_lider_estadistico/', views.panel_lider_estadistico, name='panel_lider_estadistico'),
+    path('modulo_lider/estadistico/', views.estadistico, name='estadistico'),
 ]

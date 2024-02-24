@@ -1,0 +1,91 @@
+{% extends 'panel/panel_lider.html' %}
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Monitoreo</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/global.css' %}">
+        <link rel="stylesheet" type="text/css" href="{% static 'css/select2.css' %}">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+{% block content %}
+    <div class="container w-50 mt-5 mb-10">
+        <div class="card card-primary">
+        <div class="row">
+            <div class="card-header text-center">
+                <h2>Monitoreos</h2>
+            </div>
+
+                    <!-- SELECT2 EXAMPLE -->
+    <div class="form-group">
+          <div class="card-body">
+            <div class="row justify-content-center">
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label>Seleccionar producto</label>
+                  <select class="form-control select2" style="width: 100%;">
+                    <option selected="selected">Alabama</option>
+                    <option>Alaska</option>
+                    <option>California</option>
+                    <option>Delaware</option>
+                    <option>Tennessee</option>
+                    <option>Texas</option>
+                    <option>Washington</option>
+                  </select>
+                </div>
+                <!-- /.form-group -->
+                   <div class="form-group">
+                  <label>Seleccionar producto</label>
+                  <select class="form-control select2" style="width: 100%;">
+                    <option selected="selected">Alabama</option>
+                    <option>Alaska</option>
+                    <option>California</option>
+                    <option>Delaware</option>
+                    <option>Tennessee</option>
+                    <option>Texas</option>
+                    <option>Washington</option>
+                  </select>
+                </div>
+
+
+                <!-- Date and time range -->
+                <div class="form-group">
+                  <label>Date and time range:</label>
+                  <div class="input-group">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text"><i class="far fa-clock"></i></span>
+                    </div>
+                    <input type="text" class="form-control float-right  mb-3" id="reservationtime">
+                  </div>
+                  <!-- /.input group -->
+                </div>
+              </div>
+                <div class="d-flex card-footer justify-content-between">
+                    <a type="submit" class="btn btn-red w-auto" href="{% url 'modulo_lider' %}">Cancelar</a>
+                    <button type="submit" class="btn btn-primary">Guardar</button>
+                </div>
+            </div>
+            </div>
+            </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}
+</body>
+<footer>
+</footer>
+<script>
+    //Date range picker with time picker
+    $('#reservationtime').daterangepicker({
+      timePicker: true,
+      timePickerIncrement: 30,
+      locale: {
+        format: 'MM/DD/YYYY hh:mm A'
+      }
+    })
+</script>
+<script src="{% static 'js/select_prueba.js' %}"></script>
+</html>

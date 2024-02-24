@@ -2,8 +2,8 @@ from django.urls import path, include
 from . import views
 
 urlpatterns = [
-    path('modulo_operador/', views.modulo_operador, name='modulo_operador'),
-    path('estadisticos/', views.estadisticos, name='estadisticos'),
-    path('crear_producto/', views.crear_producto, name='crear_producto'),
-    path('panel_operador/', views.panel_operador, name='panel_operador'),
+    path('operador/', views.operador, name='operador'),
+    path('operador/estadisticos/', views.estadisticos, name='estadisticos'),
+    path('operador/crear_producto/', views.crear_producto, name='crear_producto'),
+    path('operador/panel_operador/', views.panel_operador, name='panel_operador'),
 ]

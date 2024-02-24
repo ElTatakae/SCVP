@@ -25,4 +25,17 @@ def producto(request):
 
 def monitoreo(request):
     context = {}
-    return render(request, 'monitoreo.html', context) #asegurarnos de que el contexto incluya el token CSRF con render
+    return render(request, 'monitoreo/monitoreo.html', context) #asegurarnos de que el contexto incluya el token CSRF con render
+
+
+def select_prueba(request):
+    context = {}
+    return render(request, 'prueba_select.html', context) #asegurarnos de que el contexto incluya el token CSRF con render
+
+def estadistico(request):
+    context = {}
+    return render(request, 'estadistico/estadistico.html', context) #asegurarnos de que el contexto incluya el token CSRF con render
+
+def panel_lider_estadistico(request):
+    context = {}
+    return render(request, 'panel/panel_lider_estadistico.html', context) #asegurarnos de que el contexto incluya el token CSRF con render

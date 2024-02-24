@@ -4,13 +4,7 @@ from django.shortcuts import render, redirect
 from django.contrib.auth import authenticate, login
 from django.contrib.auth.forms import AuthenticationForm
 
-def inicio_ingresoaa(request):
-    template = loader.get_template('inicio_ingreso.html')
-    return HttpResponse(template.render())
 
-def ingreso_admin(reques):
-    template = loader.get_template('ingreso_admin.html')
-    return HttpResponse(template.render())
 
 def ingresoaa(request):
     print (request.POST)
@@ -33,7 +27,7 @@ def ingresoaa(request):
             return render(request, 'inicio_ingreso.html', {'error': error_message})
     return render(request, 'inicio_ingreso.html')
 
-def ingreso(request):
+def ingreso_usuario(request):
     print(request.POST)
     if request.method == 'GET':
         return render(request, 'inicio_ingreso.html', {
@@ -52,13 +46,8 @@ def ingreso(request):
 
 
 
-def modulo_operador(request):
-    template = loader.get_template('modulo_operador.html')
-    return HttpResponse(template.render())
 
-def modulo_lider(request):
-    template = loader.get_template('modulo_lider.html')
-    return HttpResponse(template.render())
+
 
 from django.shortcuts import render
 

@@ -1,5 +1,6 @@
 {% extends "panel/panel_lider.html" %}
 {% load static %}
+{% block content %}
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -9,27 +10,18 @@
         <meta name="description" content="" />
         <meta name="author" content="" />
         <title>Registro de usuario</title>
-        <link rel="stylesheet" href="{% static 'global.css' %}">
+        <link rel="stylesheet" href="{% static 'css/global.css' %}">
     </head>
 
-
-
-    <body class="bg-primary">
-{% block content %}
-        <div id="layoutAuthentication" class="bg-primary">
-            <div id="layoutAuthentication_content">
-                <main>
-
+    <body>
                     <div class="container-xl px-4">
                         <div class="row justify-content-center">
                             <div class="col-lg-5">
-
-                                <!-- Basic login form-->
                                 <div class="card shadow-lg border-0 rounded-lg mt-5">
                                     <div class="card-header justify-content-center"><h3 class="fw-light my-4">Registro</h3></div>
                                     <div class="card-body">
                                         <!-- Django Form -->
-                                        <form action="{% url 'registro_de_lideres_y_operadores' %}" method="post">
+                                        <div action="{% url 'registro_de_lideres_y_operadores' %}" method="post">
                                             {% csrf_token %}
 
                                             <!-- Form Group (nombre) -->
@@ -53,7 +45,6 @@
                                         </div>
 
 
-
                                               <!-- Form Group (tipo_empleado) -->
                                             <div class="mb-3">
                                                 <label class="small mb-1" for="tipo_empleado">Tipo de empleado:</label>
@@ -63,6 +54,10 @@
                                                     <option value="operador">Operador</option>
                                                 </select>
                                             </div>
+
+
+                                              <div class="col-lg-5">
+
                                                     <!-- Form Group (grupo) -->
                                                     <div class="mb-3">
                                                         <label class="small mb-1" for="grupo">Grupo:</label>
@@ -99,7 +94,9 @@
                                                 <a class="btn btn-secondary btn-red" href="{% url 'modulo_lider' %}">Cancelar</a>
                                             <input class="btn btn-primary" type="submit" value="Registrar">
                                             </div>
+                                                      </div>
                                         </form>
+
                                         <!-- End Django Form -->
                                     </div>
                                 </div>
@@ -107,27 +104,26 @@
                         </div>
                     </div>
 
-                </main>
+
+
             </div>
-            <div id="layoutAuthentication_footer">
-                <footer class="footer-admin mt-auto footer-dark">
-                    <div class="container-xl px-4">
-                        <div class="row">
-                            <div class="col-md-6 small">Copyright &copy; SCVP 2024</div>
-                            <div class="col-md-6 text-md-end small">
-                                <a href="#!">Privacy Policy</a>
-                                &middot;
-                                <a href="#!">Terms &amp; Conditions</a>
-                            </div>
-                        </div>
-                    </div>
-                </footer>
-            </div>
-        </div>
-        <!-- { % messages %} Mostrar mensajes de error de registro de usuario -->
+
     </body>
 {% endblock %}
-
+            <footer>
+                <div id="layoutAuthentication_footer">
+                            <footer class="footer-admin mt-auto footer-dark">
+                                <div class="container-xl px-4">
+                                    <div class="row">
+                                        <div class="col-md-6 small">Copyright &copy; SCVP 2024</div>
+                                        <div class="col-md-6 text-md-end small">
+                                            <a href="#!">Privacy Policy</a>
+                                            &middot;
+                                            <a href="#!">Terms &amp; Conditions</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </footer>
 <script>
     document.addEventListener("DOMContentLoaded", function () {
         var passwordInput = document.getElementById('password');

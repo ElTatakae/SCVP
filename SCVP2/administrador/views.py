@@ -21,7 +21,7 @@ def registro_de_administrador(request):
 
 
 def panel_administrador(request):
-    template = loader.get_template('panel_administrador.html')
+    template = loader.get_template('panel/panel_administrador.html')
     return HttpResponse(template.render())
 
 
