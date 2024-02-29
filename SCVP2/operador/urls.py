@@ -1,9 +1,10 @@
 from django.urls import path, include
 from . import views
+from .views import operadorView, estadisticoView, crearProductoView
 
+app_name = 'operador'
 urlpatterns = [
-    path('operador/', views.operador, name='operador'),
-    path('operador/estadisticos/', views.estadisticos, name='estadisticos'),
-    path('operador/crear_producto/', views.crear_producto, name='crear_producto'),
-    path('operador/panel_operador/', views.panel_operador, name='panel_operador'),
+    path('inicio/', operadorView.as_view(), name='inicio'),
+    path('operador/estadisticos/', estadisticoView.as_view(), name='estadisticos'),
+    path('operador/crear_producto/', crearProductoView.as_view(), name='crear_producto'),
 ]

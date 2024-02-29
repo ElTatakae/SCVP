@@ -1,37 +1,30 @@
-from django.shortcuts import render, redirect
-from django.http import HttpResponse
-from django.template import loader
-from django.shortcuts import render, redirect
-from django.contrib.auth import authenticate, login
-#from .forms import registroAdministradorForm, ingresoAdminForm
-#from django.views.decorators.csrf import csrf_protect
-#from django.views.decorators.csrf import csrf_exempt
+from django.views.generic import TemplateView
 
 
-#@csrf_exempt
-#@csrf_protect #Esto asegura que la validación del token CSRF se realice antes de procesar cualquier solicitud POST a esta vista.
-def registro_de_usuario(request):
-    template = loader.get_template('registro/registro_de_usuario.html')
-    return HttpResponse(template.render())
+class adminInicioView(TemplateView):
+    template_name = 'modulo_administrador.html'
 
-def registro_de_administrador(request):
-    template = loader.get_template('registro/registro_de_administrador.html')
-    return HttpResponse(template.render())
+    def post(self, request, *args, **kwargs):
+        return super().get(request, *args, **kwargs)
 
 
+class registroEmpresaView(TemplateView):
+    template_name = 'registro/registro_de_empresa.html'
 
-def panel_administrador(request):
-    template = loader.get_template('panel/panel_administrador.html')
-    return HttpResponse(template.render())
+    def post(self, request, *args, **kwargs):
+        return super().get(request, *args, **kwargs)
+
+class registroLiderView(TemplateView):
+        template_name = 'registro/registro_de_lideres.html'
+
+        def post(self, request, *args, **kwargs):
+            return super().get(request, *args, **kwargs)
 
 
+class registroAdminView(TemplateView):
+    template_name = 'registro/registro_de_administrador.html'
 
-def modulo_administrador(request):
-    template = loader.get_template('modulo_administrador.html')
-    return HttpResponse(template.render())
+    def post(self, request, *args, **kwargs):
+        return super().get(request, *args, **kwargs)
 
 
-
-def registro_de_empresa(request):
-    template = loader.get_template('registro/registro_de_empresa.html')
-    return HttpResponse(template.render())

@@ -1,22 +1,16 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 from django.template import loader
+from django.views.generic import TemplateView
 
 
-def operador(request):
-    context = {}
-    return render(request, 'modulo_operador.html', context) #asegurarnos de que el contexto incluya el token CSRF con render
+class operadorView(TemplateView):
+    template_name = 'modulo_operador.html'
 
 
-def estadisticos(request):
-    template = loader.get_template('estadistico/estadisticos.html')
-    return HttpResponse(template.render())
+class estadisticoView(TemplateView):
+    template_name = 'estadistico/estadisticos.html'
 
-def crear_producto(request):
-    template = loader.get_template('producto/crear_producto.html')
-    return HttpResponse(template.render())
 
-def panel_operador(request):
-    context = {}
-    return render(request, 'panel/panel_operador.html', context) #asegurarnos de que el contexto incluya el token CSRF con render
-
+class crearProductoView(TemplateView):
+    template_name = 'producto/crear_producto.html'

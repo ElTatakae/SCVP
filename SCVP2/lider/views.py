@@ -1,41 +1,75 @@
 from django.http import HttpResponse
 from django.template import loader
-from django.shortcuts import render
+from django.shortcuts import render, redirect
+from django.views import View
+from django.views.generic import TemplateView
 
 
-def modulo_lider(request):
-    context = {}
-    return render(request, 'modulo_lider.html', context) #asegurarnos de que el contexto incluya el token CSRF con render
+class inicioLiderView(TemplateView):
+    template_name = 'modulo_lider.html'
 
-def crear_grupo(request):
-    context = {}
-    return render(request, 'grupo/crear_grupo.html', context) #asegurarnos de que el contexto incluya el token CSRF con render
-
-def registro_de_lideres_y_operadores(request):
-    context = {}
-    return render(request, 'registro/registro_de_lideres_y_operadores.html', context) #asegurarnos de que el contexto incluya el token CSRF con render
-
-def procesos(request):
-    context = {}
-    return render(request, 'proceso/procesos.html', context) #asegurarnos de que el contexto incluya el token CSRF con render
-
-def producto(request):
-    context = {}
-    return render(request, 'producto/producto.html', context) #asegurarnos de que el contexto incluya el token CSRF con render
-
-def monitoreo(request):
-    context = {}
-    return render(request, 'monitoreo/monitoreo.html', context) #asegurarnos de que el contexto incluya el token CSRF con render
+    def post(self, request, *args, **kwargs):
+        return super().get(request, *args, **kwargs)
 
 
-def select_prueba(request):
-    context = {}
-    return render(request, 'prueba_select.html', context) #asegurarnos de que el contexto incluya el token CSRF con render
+class crearGrupoView(TemplateView):
+    template_name = 'grupo/crear_grupo.html'
 
-def estadistico(request):
-    context = {}
-    return render(request, 'estadistico/estadistico.html', context) #asegurarnos de que el contexto incluya el token CSRF con render
+    def post(self, request, *args, **kwargs):
+        return super().get(request, *args, **kwargs)
 
-def panel_lider_estadistico(request):
-    context = {}
-    return render(request, 'panel/panel_lider_estadistico.html', context) #asegurarnos de que el contexto incluya el token CSRF con render
+
+class registroDeLideresYOperadoresView(TemplateView):
+    template_name = 'registro/registro_usuarios.html'
+
+    def post(self, request, *args, **kwargs):
+        # Aquí va tu lógica para manejar la solicitud POST
+        return super().get(request, *args, **kwargs)
+
+
+class procesosView(TemplateView):
+    template_name = 'proceso/procesos.html'
+
+    def post(self, request, *args, **kwargs):
+        return super().get(request, *args, **kwargs)
+
+
+class productoView(TemplateView):
+    template_name = 'producto/producto.html'
+
+    def post(self, request, *args, **kwargs):
+        return super().get(request, *args, **kwargs)
+
+
+class monitoreoView(TemplateView):
+    template_name = 'monitoreo/monitoreo.html'
+
+    def post(self, request, *args, **kwargs):
+        return super().get(request, *args, **kwargs)
+
+
+class estadisticoView(TemplateView):
+    template_name = 'estadistico/estadistico.html'
+
+    def post(self, request, *args, **kwargs):
+        return super().get(request, *args, **kwargs)
+
+class asignarVariableView(TemplateView):
+        template_name = 'producto/asignar_variable_producto.html'
+
+        def post(self, request, *args, **kwargs):
+            return super().get(request, *args, **kwargs)
+
+
+class asignarEstandarEquipoView(TemplateView):
+    template_name = 'equipo/asignar_estandar_equipo.html'
+
+    def post(self, request, *args, **kwargs):
+        return super().get(request, *args, **kwargs)
+
+
+class variableView(TemplateView):
+    template_name = 'variable/variable.html'
+
+    def post(self, request, *args, **kwargs):
+        return super().get(request, *args, **kwargs)

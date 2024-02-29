@@ -1,13 +1,21 @@
-from django.urls import path, include
+from django.urls import path
 from . import views
+from django.views.generic import TemplateView
+from .views import inicioLiderView, crearGrupoView, procesosView, productoView, estadisticoView, monitoreoView, \
+    asignarVariableView, asignarEstandarEquipoView, variableView
+
+app_name = 'lider'
 
 urlpatterns = [
-    path('modulo_lider/', views.modulo_lider, name='modulo_lider'),
-    path('modulo_lider/crear_grupo/', views.crear_grupo, name='crear_grupo'),
-    path('modulo_lider/procesos/', views.procesos, name='procesos'),
-    path('modulo_lider/registro_de_lideres_y_operadores/', views.registro_de_lideres_y_operadores, name='registro_de_lideres_y_operadores'),
-    path('modulo_lider/producto/', views.producto, name='producto'),
-    path('modulo_lider/monitoreo/', views.monitoreo, name='monitoreo'),
-    path('panel_lider_estadistico/', views.panel_lider_estadistico, name='panel_lider_estadistico'),
-    path('modulo_lider/estadistico/', views.estadistico, name='estadistico'),
+    path('lider/', inicioLiderView.as_view(), name='inicio_lider'),
+    path('lider/crear_grupo/', crearGrupoView.as_view(), name='crear_grupo'),
+    path('lider/procesos/', procesosView.as_view(), name='procesos'),
+    path('lider/registro_usuarios/', views.registroDeLideresYOperadoresView.as_view(),
+         name='registroDeLideresYOperadores'),
+    path('lider/producto/', productoView.as_view(), name='producto'),
+    path('lider/producto/asignar_var', asignarVariableView.as_view(), name='asignar_var_producto'),
+    path('lider/monitoreo/', monitoreoView.as_view(), name='monitoreo'),
+    path('lider/estadistico/', estadisticoView.as_view(), name='estadistico'),
+    path('lider/equipo/', asignarEstandarEquipoView.as_view(), name='asignar_estandar_equipo'),
+    path('lider/variable/', variableView.as_view(), name='variable'),
 ]
