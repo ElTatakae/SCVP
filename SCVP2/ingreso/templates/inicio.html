@@ -4,9 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <title>Inicio SCVP</title>
-    <link  rel="stylesheet" href= "{% static "css/bootstrap.min.css"%}"/>
+    <link  rel="stylesheet" href= "{% static 'css/bootstrap.min.css'%}"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
-    <link rel="icon" href="{% static "img/favicon.png"%}" type="image/x-icon">
+    <link rel="icon" href="{% static 'img/favicon.png'%}" type="image/x-icon">
 </head>
 <header>
 </header>
@@ -19,7 +19,7 @@
         <h1 class="display-4 font-weight-bold">SisCoVaPro</h1>
         <p class="font-italic ">SISTEMA DE CONTROL DE VARIABLES DE PROCESO</p>
         <div class="container mb-5">
-            <a href="{% url "ingreso:ingreso_usuario" %}" role="button" class="btn btn-primary px-5 w-auto">ACCEDER</a>
+            <a href="{% url 'login' %}" role="button" class="btn btn-primary px-5 w-auto">ACCEDER</a>
         </div>
     </div>
 </div>
