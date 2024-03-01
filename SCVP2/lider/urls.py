@@ -1,13 +1,13 @@
 from django.urls import path
 from . import views
 from django.views.generic import TemplateView
-from .views import inicioLiderView, crearGrupoView, procesosView, productoView, estadisticoView, monitoreoView, \
+from .views import InicioLiderView, crearGrupoView, procesosView, productoView, estadisticoView, monitoreoView, \
     asignarVariableView, asignarEstandarEquipoView, variableView
 
 app_name = 'lider'
 
 urlpatterns = [
-    path('lider/', inicioLiderView.as_view(), name='inicio_lider'),
+    path('inicio_lider/', InicioLiderView.as_view(), name='inicio_lider'),
     path('lider/crear_grupo/', crearGrupoView.as_view(), name='crear_grupo'),
     path('lider/procesos/', procesosView.as_view(), name='procesos'),
     path('lider/registro_usuarios/', views.registroDeLideresYOperadoresView.as_view(),

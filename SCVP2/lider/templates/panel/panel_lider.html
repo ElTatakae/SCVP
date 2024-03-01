@@ -5,16 +5,16 @@
     <meta charset="utf-8"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
-    <tittle></tittle>
+    <link href="{% static 'css/style.min.css' %}" rel="stylesheet"/>
+    <link rel="stylesheet" href="{% static 'css/global.css' %}">
+    <link rel="icon" type="image/x-icon" href="{% static 'assets/img/favicon.png' %}"/>
     <script data-search-pseudo-elements defer
             src="{% static 'js/all.min.js' %}"
             crossorigin="anonymous"></script>
     <script src="{% static 'libs/feather.min.js' %}"
             crossorigin="anonymous"></script>
     <link rel="stylesheet" href="{% static 'libs/font-awesome/css/all.min.css' %}">
-    <link rel="stylesheet" href="{% static 'css/style.min.css' %}"/>
-    <link rel="stylesheet" href="{% static 'css/global.css' %}">
-    <link rel="icon" type="image/x-icon" href="{% static 'assets/img/favicon.png' %}"/>
+
 
 </head>
 <body class="nav-fixed">
@@ -190,7 +190,7 @@
                     <div class="dropdown-item-icon"><i data-feather="settings"></i></div>
                     Cuenta
                 </a>
-                <a class="dropdown-item" href="#">
+                <a class="dropdown-item" href="{% url 'logout' %}">
                     <div class="dropdown-item-icon"><i data-feather="log-out"></i></div>
                     Cerrar Sesión
                 </a>
@@ -253,7 +253,7 @@
                     <div class="collapse" id="collapseUtilities" data-bs-parent="#accordionSidenav">
                         <nav class="sidenav-menu-nested nav">
                             <a class="nav-link" href="#">Asignar estándares</a>
-                            <a class="nav-link" href="#">Modificar estándares</a>
+                             <a class="nav-link" href="#">Modificar estándares</a>
                         </nav>
                     </div>
 
@@ -290,7 +290,7 @@
                     <div class="collapse" id="variables" data-bs-parent="#accordionSidenav">
                         <nav class="sidenav-menu-nested nav">
                             <a class="nav-link" href="#">Crear Variable</a>
-                            <a class="nav-link" href="#">Editar Variables</a>
+                                 <a class="nav-link" href="#">Editar Variables</a>
                         </nav>
                     </div>
 

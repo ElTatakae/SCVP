@@ -1,7 +1,7 @@
 from django.views.generic import TemplateView
 
 
-class adminInicioView(TemplateView):
+class AdminInicioView(TemplateView):
     template_name = 'modulo_administrador.html'
 
     def post(self, request, *args, **kwargs):

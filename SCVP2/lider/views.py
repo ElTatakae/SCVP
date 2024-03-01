@@ -2,14 +2,16 @@ from django.http import HttpResponse
 from django.template import loader
 from django.shortcuts import render, redirect
 from django.views import View
+from django.contrib.auth.mixins import LoginRequiredMixin
 from django.views.generic import TemplateView
 
 
-class inicioLiderView(TemplateView):
-    template_name = 'modulo_lider.html'
+class InicioLiderView(LoginRequiredMixin, View):
+    login_url ='/login/'
+    redirect_field_name = '/login/'
 
-    def post(self, request, *args, **kwargs):
-        return super().get(request, *args, **kwargs)
+    def get(self, request):
+        return render(request, 'modulo_lider.html')
 
 
 class crearGrupoView(TemplateView):
