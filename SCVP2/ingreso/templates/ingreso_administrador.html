@@ -34,7 +34,7 @@
                             </div>
                             <div class="card-body">
                                 <!-- Inicio de sesion formulario-->
-                                <form method="post" action="{% url 'admin:inicio_admin' %}">
+                                <form method="post" action="{% url 'administrador:inicio_administrador' %}">
                                     {% csrf_token %}
                                     {{ error }}
                                     <div class="mb-3">
@@ -70,20 +70,6 @@
             </div>
         </main>
     </div>
-</div>
-<div id="layoutAuthentication_footer" style="margin-bottom: 10px">
-    <footer class="footer-admin mt-auto footer-dark">
-        <div class="container-xl px-4">
-            <div class="row">
-                <div class="col-md-6 small">Copyright &copy; SCVP 2024</div>
-                <div class="col-md-6 text-md-end small">
-                    <a href="#!">Privacy Policy</a>
-                    &middot;
-                    <a href="#!">Terms &amp; Conditions</a>
-                </div>
-            </div>
-        </div>
-    </footer>
 </div>
 </div>
 </body>

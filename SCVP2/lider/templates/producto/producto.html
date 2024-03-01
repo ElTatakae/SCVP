@@ -30,6 +30,12 @@
                         <!--name="nombreProducto es el valor que se envia "-->
                     </div>
 
+                    <div class="form-group col-md-6">
+                        <label class="mb-1 mt-3" for="inputNombreProducto">Descripción del producto</label>
+                        <textarea class="form-control w-100" id="inputNombreProducto" name="nombreProducto"
+                                  placeholder="Introduce el nombre del producto"></textarea>
+                    </div>
+
 
                     <div class="col-md-6">
                         <div class="form-group">
@@ -46,7 +52,16 @@
                             </select>
                         </div>
                     </div>
-
+                    <div class="form-group col-md-6">
+                        <label class="mb-1 mt-3" for="selectLineaProduccion">Linea de producción</label>
+                        <select class="form-control w-100" id="selectLineaProduccion" name="lineaProduccion">
+                            <option value="">Selecciona la línea de producción</option>
+                            <!-- Aquí puedes agregar las opciones de las líneas de producción -->
+                            <option value="linea1">Línea 1</option>
+                            <option value="linea2">Línea 2</option>
+                            <!-- etc. -->
+                        </select>
+                    </div>
                     <div class="card-footer d-flex justify-content-between mt-4 mb-0 w-100">
                         <button class="btn btn-outline-danger" type="button"
                                 onclick="location.href='{% url 'lider:inicio_lider' %}'">
@@ -64,10 +79,10 @@
 </footer>
 <script> src ={% static "js/funcion_rango_limite_control.js" %}</script>
 <script>
-   $(document).ready(function () {
-    //Initialize Select2 Elements
-    $('.select2').select2();
-});
+    $(document).ready(function () {
+        //Initialize Select2 Elements
+        $('.select2').select2();
+    });
 </script>
 </html>
 

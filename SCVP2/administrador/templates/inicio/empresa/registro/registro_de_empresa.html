@@ -27,7 +27,7 @@
                                 </div>
                                 <hr class="m-0"/>
                                 <div class="card-body p-5">
-                                    <form method="post" action="{% url 'admin:registro_empresa' %}">
+                                    <form method="post" action="{% url 'administrador:registro_empresa' %}">
                                         <div class="row">
                                             <div class="col-md-6">
                                                 <div class="mb-0 text-center">
@@ -118,9 +118,9 @@
                                 </div>
                                 <div class="card-footer d-flex align-items-center justify-content-between mt-4 mb-0 w-100">
                                     <a class="btn btn-outline-danger" style="width: 140px;"
-                                       href="{% url 'admin:inicio_admin' %}">Cancelar</a>
+                                       href="{% url 'administrador:menu_empresa' %}">Cancelar</a>
                                     <a class="btn btn-outline-primary" style="width: 140px;"
-                                       href="{% url 'admin:registro_empresa' %}">Registrar</a>
+                                       href="{% url 'administrador:registro_empresa' %}">Registrar</a>
                                 </div>
                                 </form>
                             </div>
