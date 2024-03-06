@@ -45,7 +45,7 @@ $.extend( true, DataTable.Buttons.defaults, {
 		},
 		collection: {
 			tag: 'div',
-			className: 'dropdown-menu',
+			className: 'dropdown-inicio',
 			closeButton: false,
 			button: {
 				tag: 'a',
@@ -81,7 +81,7 @@ $.extend( true, DataTable.Buttons.defaults, {
 } );
 
 DataTable.ext.buttons.collection.className += ' dropdown-toggle';
-DataTable.ext.buttons.collection.rightAlignClassName = 'dropdown-menu-right';
+DataTable.ext.buttons.collection.rightAlignClassName = 'dropdown-inicio-right';
 
 return DataTable.Buttons;
 }));
